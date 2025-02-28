@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "about": "O mnie",
+    "pricing": "Cennik",
+    "contact": "Kontakt",
+    "bookNow": "Umów wizytę"
+  },
+  "hero": {
+    "title": "Rozpocznij swoją podróż do dobrostanu emocjonalnego",
+    "subtitle": "Odkryj bezpieczną przestrzeń do rozwoju, uzdrowienia i samopoznania poprzez profesjonalne wsparcie psychologiczne",
+    "cta": "Zarezerwuj pierwszą wizytę"
+  },
+  "services": {
+    "title": "Oferowane usługi",
+    "individual": {
+      "title": "Terapia indywidualna",
+      "description": "Spersonalizowane sesje jeden na jeden skupione na Twoich unikalnych potrzebach i celach"
+    },
+    "couples": {
+      "title": "Terapia par",
+      "description": "Wzmocnij swój związek poprzez kierowaną komunikację i zrozumienie"
+    },
+    "anxiety": {
+      "title": "Leczenie lęku",
+      "description": "Naucz się skutecznych strategii radzenia sobie z lękiem i odzyskaj spokój umysłu"
+    },
+    "stress": {
+      "title": "Zarządzanie stresem",
+      "description": "Rozwiń praktyczne narzędzia do radzenia sobie z życiowymi wyzwaniami"
+    }
+  },
+  "about": {
+    "title": "O Dr Agacie Plura",
+    "description": "Z ponad 15-letnim doświadczeniem, specjalizuję się w pomocy jednostkom i parom w nawigowaniu przez życiowe wyzwania. Moje podejście łączy techniki oparte na dowodach ze współczującym zrozumieniem, aby stworzyć trwałą pozytywną zmianę.",
+    "credentials": {
+      "phd": "Doktorat z Psychologii Klinicznej na Uniwersytecie Stanford",
+      "license": "Licencjonowany Psycholog Kliniczny",
+      "certification": "Certyfikowany terapeuta Terapii Poznawczo-Behawioralnej"
+    }
+  },
+  "pricing": {
+    "title": "Cennik sesji",
+    "consultation": {
+      "title": "Konsultacja wstępna",
+      "duration": "60 min",
+      "description": "Poznajmy się i omówmy Twoje cele"
+    },
+    "individual": {
+      "title": "Sesja indywidualna",
+      "duration": "50 min",
+      "description": "Sesja terapeutyczna jeden na jeden"
+    },
+    "couples": {
+      "title": "Sesja dla par",
+      "duration": "80 min",
+      "description": "Terapia dla par"
+    },
+    "online": {
+      "title": "Sesja online",
+      "duration": "50 min",
+      "description": "Terapia zdalna z komfortu Twojego domu"
+    }
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "subtitle": "Gotowy na pierwszy krok? Skontaktuj się ze mną, aby umówić konsultację lub zadać pytania.",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "message": "Wiadomość",
+      "submit": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "successMessage": "Twoja wiadomość została wysłana pomyślnie. Wkrótce się z Tobą skontaktujemy!",
+      "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio."
+    }
+  },
+  "footer": {
+    "slogan": "Pomagam odnaleźć drogę do dobrostanu",
+    "hours": {
+      "title": "Godziny przyjęć",
+      "weekdays": "Poniedziałek - Piątek: 9:00 - 18:00",
+      "saturday": "Sobota: 10:00 - 14:00"
+    },
+    "emergency": {
+      "title": "Kontakt kryzysowy",
+      "text": "W przypadku nagłego kryzysu psychicznego, zadzwoń pod 112 lub skontaktuj się z Centrum Wsparcia pod numerem 800 70 2222."
+    },
+    "rights": "Wszelkie prawa zastrzeżone"
+  },
+  "languageSwitch": {
+    "pl": "Polski",
+    "en": "English"
+  }
+}

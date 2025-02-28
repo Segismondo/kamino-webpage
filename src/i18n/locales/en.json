@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "title": "Begin Your Journey to Emotional Well-being",
+    "subtitle": "Discover a safe space for growth, healing, and self-discovery through professional psychological support",
+    "cta": "Book Your First Session"
+  },
+  "services": {
+    "title": "Services Offered",
+    "individual": {
+      "title": "Individual Therapy",
+      "description": "Personalized one-on-one sessions focused on your unique needs and goals"
+    },
+    "couples": {
+      "title": "Couples Therapy",
+      "description": "Strengthen your relationship through guided communication and understanding"
+    },
+    "anxiety": {
+      "title": "Anxiety Treatment",
+      "description": "Learn effective strategies to manage anxiety and reclaim your peace of mind"
+    },
+    "stress": {
+      "title": "Stress Management",
+      "description": "Develop practical tools to handle life's challenges with confidence"
+    }
+  },
+  "about": {
+    "title": "About Dr. Agata Plura",
+    "description": "With over 15 years of experience, I specialize in helping individuals and couples navigate life's challenges. My approach combines evidence-based techniques with compassionate understanding to create lasting positive change.",
+    "credentials": {
+      "phd": "Ph.D. in Clinical Psychology from Stanford University",
+      "license": "Licensed Clinical Psychologist",
+      "certification": "Certified in Cognitive Behavioral Therapy"
+    }
+  },
+  "pricing": {
+    "title": "Session Pricing",
+    "consultation": {
+      "title": "Initial Consultation",
+      "duration": "60 min",
+      "description": "Get to know each other and discuss your goals"
+    },
+    "individual": {
+      "title": "Individual Session",
+      "duration": "50 min",
+      "description": "One-on-one therapy session"
+    },
+    "couples": {
+      "title": "Couples Session",
+      "duration": "80 min",
+      "description": "Relationship counseling for couples"
+    },
+    "online": {
+      "title": "Online Session",
+      "duration": "50 min",
+      "description": "Virtual therapy from the comfort of your home"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to take the first step? Contact me to schedule your initial consultation or ask any questions you may have.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Your message has been sent successfully. We'll get back to you soon!",
+      "errorMessage": "There was an error sending your message. Please try again or contact us directly."
+    }
+  },
+  "footer": {
+    "slogan": "Helping you find your path to wellness",
+    "hours": {
+      "title": "Office Hours",
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "saturday": "Saturday: 10:00 AM - 2:00 PM"
+    },
+    "emergency": {
+      "title": "Emergency Contact",
+      "text": "If you're experiencing a mental health emergency, please call 911 or contact the National Crisis Hotline at 988."
+    },
+    "rights": "All rights reserved"
+  },
+  "languageSwitch": {
+    "pl": "Polski",
+    "en": "English"
+  }
+}
