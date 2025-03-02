@@ -54,7 +54,7 @@
     },
     "adhd": {
       "title": "ADHD diagnosis",
-      "duration": "",
+      "duration": "~ 5 hours",
       "description": ""
     }
   },
@@ -76,8 +76,9 @@
     "slogan": "Helping you find your path to wellness",
     "hours": {
       "title": "Office Hours",
-      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
-      "saturday": "Saturday: 10:00 AM - 2:00 PM"
+      "weekdays": "Monday - Friday: 09:00 - 19:00 ",
+      "saturday": "Saturday: 09:00 - 15:00 ",
+      "sunday": "Sunday: 09:00 - 15:00"
     },
     "emergency": {
       "title": "Emergency Contact",

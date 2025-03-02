@@ -8,8 +8,8 @@
     "bookNow": "Umów wizytę"
   },
   "hero": {
-    "title": "Rozpocznij swoją podróż do dobrostanu emocjonalnego",
-    "subtitle": "Odkryj bezpieczną przestrzeń do rozwoju, uzdrowienia i samopoznania poprzez profesjonalne wsparcie psychologiczne",
+    "title": "Twoja droga do zmiany i zrozumienia",
+    "subtitle": "Kamino to przestrzeń w której wspólnie będziemy wędrować ku pełniejszemu i bardziej świadomemu życiu.",
     "cta": "Zarezerwuj pierwszą wizytę"
   },
   "services": {
@@ -29,15 +29,15 @@
   },
   "about": {
     "title": "O mgr Agacie Plura",
-    "description": "Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.",
+    "description": "Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego w Międzynarodowej Szkole Psychoterapii Psychodynamicznej. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.",
     "experience": "Doświadczenie zdobywałam podczas praktyk w Wojewódzkim Szpitalu dla Nerwowo i Psychicznie Chorych 'Dziekanka',  Domu Pomocy Społecznej, szkole oraz w Stowarzyszeniach wspierających osoby w kryzysie. Na co dzień pracuję w Poradni Psychologiczno-Pedagogicznej, gdzie diagnozuję oraz wspieram dzieci i młodzież w trudnościach emocjonalnych, rozwojowych i edukacyjnych.",
     "approach": "Pomagam lepiej zrozumieć siebie, swoje emocje i mechanizmy działania, co pozwala na bardziej świadome podejmowanie decyzji i budowanie satysfakcjonujących relacji. Wspieram w radzeniu sobie ze stresem, lękiem i trudnościami życiowymi, a także w odkrywaniu własnego potencjału i wewnętrznych zasobów.",
     "credentials": {
-      "education": "Magister psychologii klinicznej dzieci i młodzieży, Uniwersytet SWPS w Poznaniu",
-      "therapy": "Psychoterapeutka w trakcie szkolenia psychodynamicznego",
-      "tus": "Certyfikowany trener umiejętności społecznych (TUS)",
-      "tsr": "Podstawowy kurs Terapii Skoncentrowanej na Rozwiązaniach (TSR)",
-      "cbt": "Kurs terapii poznawczo-behawioralnej (CBT) w pracy z lękiem"
+      "education": "Magister Psychologii Klinicznej Dzieci i Młodzieży, Uniwersytet SWPS w Poznaniu",
+      "therapy": "W trakcie szkolenia w Międzynarodowej Szkole Psychoterapii Psychodynamicznej",
+      "tus": "Certyfikowany Trener Umiejętności Społecznych (TUS)",
+      "tsr": "Podstawowy Kurs Terapii Skoncentrowanej na Rozwiązaniach (TSR)",
+      "cbt": "Kurs Terapii Poznawczo-Behawioralnej (CBT) m.in w pracy z lękiem"
     }
   },
   "pricing": {
@@ -54,7 +54,7 @@
     },
     "adhd": {
       "title": "Diagnoza ADHD",
-      "duration": "5 godz.",
+      "duration": "ok. 5h",
       "description": ""
     }
   },
@@ -76,8 +76,9 @@
     "slogan": "Pomagam odnaleźć drogę do dobrostanu",
     "hours": {
       "title": "Godziny przyjęć",
-      "weekdays": "Poniedziałek - Piątek: 9:00 - 18:00",
-      "saturday": "Sobota: 10:00 - 14:00"
+      "weekdays": "Poniedziałek - Piątek: 9:00 - 19:00",
+      "saturday": "Sobota: 09:00 - 15:00",
+      "sunday": "Niedziela: 09:00 - 15:00"
     },
     "emergency": {
       "title": "Kontakt kryzysowy",

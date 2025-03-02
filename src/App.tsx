@@ -1,9 +1,10 @@
 import React from 'react';
-import { Menu, X, Clock, MessageCircle, Phone, Mail, MapPin, ChevronRight, Heart, Users, Brain, Sparkles, Facebook } from 'lucide-react';
+import { Menu, X, Clock, Phone, Mail, MapPin, ChevronRight, Users, Brain, Sparkles, Facebook } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import emailjs from 'emailjs-com';
+import personalPicture from "../assets/images/personal_picture.jpeg"
 
 function App() {
   const { t } = useTranslation();
@@ -29,9 +30,19 @@ function App() {
 
   const pricing = [
     { type: t('pricing.individual.title'), duration: t('pricing.individual.duration'), price: "150 PLN", description: t('pricing.individual.description') },
-    { type: t('pricing.tomatis.title'), duration: t('pricing.tomatis.duration'), price: "--", description: t('pricing.tomatis.description') },
-    { type: t('pricing.adhd.title'), duration: t('pricing.adhd.duration'), price: "650 PLN", description: t('pricing.adhd.description') },
-  ];
+    { 
+        type: t('pricing.tomatis.title'), 
+        duration: t('pricing.tomatis.duration'), 
+        price: [
+            { label: "Konsultacja", amount: "200 PLN" },
+            { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" },
+            { label: "Test przed kolejnym etapem", amount: "100 PLN" }
+        ], 
+        description: t('pricing.tomatis.description') 
+    },
+    { type: t('pricing.adhd.title'), duration: t('pricing.adhd.duration'), price: "450 PLN", description: t('pricing.adhd.description') },
+];
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -165,7 +176,7 @@ function App() {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                //src={personalPicture}
                 alt="Professional Psychologist"
                 className="w-full h-[500px] object-cover"
               />
@@ -200,7 +211,7 @@ function App() {
       {/* Image */}
       <div className="rounded-lg overflow-hidden shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80"
+          src={personalPicture}
           alt="mgr Agata Plura"
           className="w-full h-[600px] object-cover"
         />
@@ -263,26 +274,46 @@ function App() {
 
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-white">
-        <div className="max-w-7.1xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">{t('pricing.title')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section id="pricing" className="py-24 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">{t('pricing.title')}</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-teal-900">{plan.type}</h3>
-                  <Clock className="h-6 w-6 text-teal-600" />
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between min-h-[250px]">
+                    {/* Title */}
+                    <div>
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-xl font-semibold text-teal-900">{plan.type}</h3>
+                            <Clock className="h-6 w-6 text-teal-600" />
+                        </div>
+                        <p className="text-gray-600">{plan.description}</p>
+                    </div>
+
+                    {/* Pricing Section - Always centered */}
+                    <div className="mt-auto">
+                        {Array.isArray(plan.price) ? (
+                            <div className="space-y-2">
+                                {plan.price.map((item, i) => (
+                                    <div key={i} className="flex items-center justify-between">
+                                        <span className="text-gray-700">{item.label}</span>
+                                        <span className="text-2xl font-bold text-teal-600">{item.amount}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="flex items-center justify-between">
+                                <span className="text-2xl font-bold text-teal-600">{plan.price}</span>
+                                <span className="text-gray-500">{plan.duration}</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-teal-600">{plan.price}</span>
-                  <span className="text-gray-500">{plan.duration}</span>
-                </div>
-              </div>
             ))}
-          </div>
         </div>
-      </section>
+    </div>
+</section>
+
+
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-teal-50">
@@ -397,7 +428,8 @@ function App() {
               <h3 className="text-xl font-serif mb-4">{t('footer.hours.title')}</h3>
               <p className="text-teal-200">
                 {t('footer.hours.weekdays')}<br />
-                {t('footer.hours.saturday')}
+                {t('footer.hours.saturday')}<br />
+                {t('footer.hours.sunday')}
               </p>
             </div>
             <div>
