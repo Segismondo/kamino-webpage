@@ -355,8 +355,22 @@ function App() {
                   <span className="ml-4 text-gray-600">gabinetkamino@gmail.com</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-teal-600" />
-                  <span className="ml-4 text-gray-600">ul. Żupańskiego 7/5 <br />61-582 Poznań</span>
+                  <a 
+                    href="https://maps.app.goo.gl/sjxxF7iCpx7yUQZVA" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 transition"
+                  >
+                    <MapPin className="h-6 w-6" />
+                  </a>
+                  <a 
+                    href="https://maps.app.goo.gl/sjxxF7iCpx7yUQZVA" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="ml-4 text-gray-600 hover:text-teal-600 transition"
+                  >
+                    ul. Żupańskiego 7/5 <br />61-582 Poznań
+                  </a>
                 </div>
                 <div className="flex items-center">
                 <a 
