@@ -16,19 +16,15 @@
     "title": "Services Offered",
     "individual": {
       "title": "Individual Therapy",
-      "description": "Personalized one-on-one sessions focused on your unique needs and goals"
+      "description": "Anxiety Disorders, Mood Disorders, Personality Disorders"
     },
-    "couples": {
-      "title": "Couples Therapy",
-      "description": "Strengthen your relationship through guided communication and understanding"
+    "tomatis": {
+      "title": "Tomatis Method Auditory Training",
+      "description": ""
     },
-    "anxiety": {
-      "title": "Anxiety Treatment",
-      "description": "Learn effective strategies to manage anxiety and reclaim your peace of mind"
-    },
-    "stress": {
-      "title": "Stress Management",
-      "description": "Develop practical tools to handle life's challenges with confidence"
+    "adhd": {
+      "title": "ADHD diagnosis in adults",
+      "description": ""
     }
   },
   "about": {

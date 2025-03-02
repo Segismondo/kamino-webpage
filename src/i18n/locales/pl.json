@@ -16,19 +16,15 @@
     "title": "Oferowane usługi",
     "individual": {
       "title": "Terapia indywidualna",
-      "description": "Spersonalizowane sesje jeden na jeden skupione na Twoich unikalnych potrzebach i celach"
+      "description": "Zaburzenia lękowe, Zaburzenia nastroju, Zaburzenia osobowości"
     },
-    "couples": {
-      "title": "Terapia par",
-      "description": "Wzmocnij swój związek poprzez kierowaną komunikację i zrozumienie"
+    "tomatis": {
+      "title": "Trening Słuchowy Metodą Tomatisa",
+      "description": ""
     },
-    "anxiety": {
-      "title": "Leczenie lęku",
-      "description": "Naucz się skutecznych strategii radzenia sobie z lękiem i odzyskaj spokój umysłu"
-    },
-    "stress": {
-      "title": "Zarządzanie stresem",
-      "description": "Rozwiń praktyczne narzędzia do radzenia sobie z życiowymi wyzwaniami"
+    "adhd": {
+      "title": "Diagnoza ADHD u osób dorosłych ",
+      "description": ""
     }
   },
   "about": {

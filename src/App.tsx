@@ -22,10 +22,9 @@ function App() {
   });
 
   const services = [
-    { icon: <Heart className="w-12 h-12 text-teal-600" />, title: t('services.individual.title'), description: t('services.individual.description') },
-    { icon: <Users className="w-12 h-12 text-teal-600" />, title: t('services.couples.title'), description: t('services.couples.description') },
-    { icon: <Brain className="w-12 h-12 text-teal-600" />, title: t('services.anxiety.title'), description: t('services.anxiety.description') },
-    { icon: <Sparkles className="w-12 h-12 text-teal-600" />, title: t('services.stress.title'), description: t('services.stress.description') },
+    { icon: <Sparkles className="w-12 h-12 text-teal-600" />, title: t('services.individual.title'), description: t('services.individual.description') },
+    { icon: <Brain className="w-12 h-12 text-teal-600" />, title: t('services.tomatis.title'), description: t('services.tomatis.description') },
+    { icon: <Users className="w-12 h-12 text-teal-600" />, title: t('services.adhd.title'), description: t('services.adhd.description')},
   ];
 
   const pricing = [
@@ -110,6 +109,7 @@ function App() {
           <div className="flex justify-between h-16">
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-serif text-teal-800">mgr Agata Plura</h1>
+              
             </div>
             
             {/* Desktop Navigation */}
@@ -176,20 +176,23 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">{t('services.title')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-teal-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
-          </div>
+<section id="services" className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">
+      {t('services.title')}
+    </h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+      {services.map((service, index) => (
+        <div key={index} className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+          <div className="mb-4">{service.icon}</div>
+          <h3 className="text-xl font-semibold text-teal-900 mb-2">{service.title}</h3>
+          <p className="text-gray-600">{service.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
 <section id="about" className="py-24 bg-teal-50">
