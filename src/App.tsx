@@ -28,10 +28,9 @@ function App() {
   ];
 
   const pricing = [
-    { type: t('pricing.consultation.title'), duration: t('pricing.consultation.duration'), price: "$150", description: t('pricing.consultation.description') },
-    { type: t('pricing.individual.title'), duration: t('pricing.individual.duration'), price: "$130", description: t('pricing.individual.description') },
-    { type: t('pricing.couples.title'), duration: t('pricing.couples.duration'), price: "$180", description: t('pricing.couples.description') },
-    { type: t('pricing.online.title'), duration: t('pricing.online.duration'), price: "$120", description: t('pricing.online.description') },
+    { type: t('pricing.individual.title'), duration: t('pricing.individual.duration'), price: "150 PLN", description: t('pricing.individual.description') },
+    { type: t('pricing.tomatis.title'), duration: t('pricing.tomatis.duration'), price: "--", description: t('pricing.tomatis.description') },
+    { type: t('pricing.adhd.title'), duration: t('pricing.adhd.duration'), price: "650 PLN", description: t('pricing.adhd.description') },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -265,9 +264,9 @@ function App() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7.1xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">{t('pricing.title')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
                 <div className="flex items-center justify-between mb-4">

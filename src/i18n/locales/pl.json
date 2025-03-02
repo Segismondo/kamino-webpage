@@ -41,26 +41,21 @@
     }
   },
   "pricing": {
-    "title": "Cennik sesji",
-    "consultation": {
-      "title": "Konsultacja wstępna",
-      "duration": "60 min",
-      "description": "Poznajmy się i omówmy Twoje cele"
-    },
+    "title": "Cennik",
     "individual": {
       "title": "Sesja indywidualna",
       "duration": "50 min",
-      "description": "Sesja terapeutyczna jeden na jeden"
+      "description": ""
     },
-    "couples": {
-      "title": "Sesja dla par",
-      "duration": "80 min",
-      "description": "Terapia dla par"
+    "tomatis": {
+      "title": "Trening Słuchowy Metodą Tomatisa",
+      "duration": "",
+      "description": ""
     },
-    "online": {
-      "title": "Sesja online",
-      "duration": "50 min",
-      "description": "Terapia zdalna z komfortu Twojego domu"
+    "adhd": {
+      "title": "Diagnoza ADHD",
+      "duration": "5 godz.",
+      "description": ""
     }
   },
   "contact": {

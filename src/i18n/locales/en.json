@@ -42,25 +42,20 @@
   },
   "pricing": {
     "title": "Session Pricing",
-    "consultation": {
-      "title": "Initial Consultation",
-      "duration": "60 min",
-      "description": "Get to know each other and discuss your goals"
-    },
     "individual": {
       "title": "Individual Session",
       "duration": "50 min",
       "description": "One-on-one therapy session"
     },
-    "couples": {
-      "title": "Couples Session",
-      "duration": "80 min",
-      "description": "Relationship counseling for couples"
+    "tomatis": {
+      "title": "Tomatis Method Auditory Training",
+      "duration": "",
+      "description": ""
     },
-    "online": {
-      "title": "Online Session",
-      "duration": "50 min",
-      "description": "Virtual therapy from the comfort of your home"
+    "adhd": {
+      "title": "ADHD diagnosis",
+      "duration": "",
+      "description": ""
     }
   },
   "contact": {
