@@ -359,16 +359,24 @@ function App() {
                   <span className="ml-4 text-gray-600">ul. Żupańskiego 7/5 <br />61-582 Poznań</span>
                 </div>
                 <div className="flex items-center">
-                  <Facebook className="h-6 w-6 text-teal-600" />
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=61573692717357" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="ml-4 text-gray-600 hover:text-teal-600 transition"
-                  >
-                    Kamino - Gabinet Psychologiczny
-                  </a>
-                </div>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61573692717357" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-teal-600 hover:text-teal-700 transition"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61573692717357" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="ml-4 text-gray-600 hover:text-teal-600 transition"
+                >
+                  Kamino - Gabinet Psychologiczny
+                </a>
+              </div>
+
               </div>
             </div>
             <div>
