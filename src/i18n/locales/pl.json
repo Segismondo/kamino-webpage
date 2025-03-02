@@ -32,12 +32,16 @@
     }
   },
   "about": {
-    "title": "O Dr Agacie Plura",
-    "description": "Z ponad 15-letnim doświadczeniem, specjalizuję się w pomocy jednostkom i parom w nawigowaniu przez życiowe wyzwania. Moje podejście łączy techniki oparte na dowodach ze współczującym zrozumieniem, aby stworzyć trwałą pozytywną zmianę.",
+    "title": "O mgr Agacie Plura",
+    "description": "Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.",
+    "experience": "Doświadczenie zdobywałam podczas praktyk w Wojewódzkim Szpitalu dla Nerwowo i Psychicznie Chorych 'Dziekanka',  Domu Pomocy Społecznej, szkole oraz w Stowarzyszeniach wspierających osoby w kryzysie. Na co dzień pracuję w Poradni Psychologiczno-Pedagogicznej, gdzie diagnozuję oraz wspieram dzieci i młodzież w trudnościach emocjonalnych, rozwojowych i edukacyjnych.",
+    "approach": "Pomagam lepiej zrozumieć siebie, swoje emocje i mechanizmy działania, co pozwala na bardziej świadome podejmowanie decyzji i budowanie satysfakcjonujących relacji. Wspieram w radzeniu sobie ze stresem, lękiem i trudnościami życiowymi, a także w odkrywaniu własnego potencjału i wewnętrznych zasobów.",
     "credentials": {
-      "phd": "Doktorat z Psychologii Klinicznej na Uniwersytecie Stanford",
-      "license": "Licencjonowany Psycholog Kliniczny",
-      "certification": "Certyfikowany terapeuta Terapii Poznawczo-Behawioralnej"
+      "education": "Magister psychologii klinicznej dzieci i młodzieży, Uniwersytet SWPS w Poznaniu",
+      "therapy": "Psychoterapeutka w trakcie szkolenia psychodynamicznego",
+      "tus": "Certyfikowany trener umiejętności społecznych (TUS)",
+      "tsr": "Podstawowy kurs Terapii Skoncentrowanej na Rozwiązaniach (TSR)",
+      "cbt": "Kurs terapii poznawczo-behawioralnej (CBT) w pracy z lękiem"
     }
   },
   "pricing": {

@@ -198,43 +198,73 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-teal-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80"
-                alt="mgr Agata Plura"
-                className="w-full h-[600px] object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-serif text-teal-900 mb-6">{t('about.title')}</h2>
-              <p className="text-gray-600 mb-6">{t('about.description')}</p>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <ChevronRight className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <p className="ml-4 text-gray-600">{t('about.credentials.phd')}</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <ChevronRight className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <p className="ml-4 text-gray-600">{t('about.credentials.license')}</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <ChevronRight className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <p className="ml-4 text-gray-600">{t('about.credentials.certification')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="about" className="py-24 bg-teal-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Image */}
+      <div className="rounded-lg overflow-hidden shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80"
+          alt="mgr Agata Plura"
+          className="w-full h-[600px] object-cover"
+        />
+      </div>
+
+      {/* Text Content */}
+      <div>
+        {/* Title */}
+        <h2 className="text-3xl font-serif font-bold text-teal-900 mb-6">{t('about.title')}</h2>
+        
+        {/* Description */}
+        <p className="text-gray-700 mb-6">{t('about.description')}</p>
+
+        {/* Experience */}
+        <h3 className="text-xl font-semibold text-teal-800 mb-3">📌 Doświadczenie</h3>
+        <p className="text-gray-700 mb-6">{t('about.experience')}</p>
+
+        {/* Approach */}
+        <h3 className="text-xl font-semibold text-teal-800 mb-3">💡 Podejście</h3>
+        <p className="text-gray-700 mb-6">{t('about.approach')}</p>
+
+        {/* Credentials */}
+        <h3 className="text-xl font-semibold text-teal-800 mb-3">🎓 Wykształcenie i Szkolenia</h3>
+        <ul className="space-y-4">
+          <li className="flex items-start">
+            <ChevronRight className="h-6 w-6 text-teal-600" />
+            <p className="ml-4 text-gray-700">
+              <span className="font-semibold">📖 </span> {t('about.credentials.education')}
+            </p>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="h-6 w-6 text-teal-600" />
+            <p className="ml-4 text-gray-700">
+              <span className="font-semibold">🧠 </span> {t('about.credentials.therapy')}
+            </p>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="h-6 w-6 text-teal-600" />
+            <p className="ml-4 text-gray-700">
+              <span className="font-semibold">🤝 </span> {t('about.credentials.tus')}
+            </p>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="h-6 w-6 text-teal-600" />
+            <p className="ml-4 text-gray-700">
+              <span className="font-semibold">🔍 </span> {t('about.credentials.tsr')}
+            </p>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="h-6 w-6 text-teal-600" />
+            <p className="ml-4 text-gray-700">
+              <span className="font-semibold">🧩 </span> {t('about.credentials.cbt')}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-white">

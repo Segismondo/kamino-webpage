@@ -32,12 +32,16 @@
     }
   },
   "about": {
-    "title": "About Dr. Agata Plura",
-    "description": "With over 15 years of experience, I specialize in helping individuals and couples navigate life's challenges. My approach combines evidence-based techniques with compassionate understanding to create lasting positive change.",
+    "title": "About Agata Plura, MA",
+    "description": "I am a psychologist and psychotherapist currently undergoing psychodynamic training. I completed a five-year master's degree in clinical psychology of children and adolescents at SWPS University in Poznań. I continuously develop my competencies, seeking effective methods that allow me to better tailor help to individual needs.",
+    "experience": "I gained experience during internships at the Provincial Hospital for Nervous and Mentally Ill 'Dziekanka', Social Welfare Home, schools, and in Associations supporting people in crisis. I currently work at a Psychological and Pedagogical Counseling Center, where I diagnose and support children and adolescents with emotional, developmental, and educational difficulties.",
+    "approach": "I help people better understand themselves, their emotions, and behavioral patterns, which allows for more conscious decision-making and building satisfying relationships. I support coping with stress, anxiety, and life difficulties, as well as discovering one's potential and internal resources.",
     "credentials": {
-      "phd": "Ph.D. in Clinical Psychology from Stanford University",
-      "license": "Licensed Clinical Psychologist",
-      "certification": "Certified in Cognitive Behavioral Therapy"
+      "education": "Master's in Clinical Psychology of Children and Adolescents, SWPS University in Poznań",
+      "therapy": "Psychotherapist in psychodynamic training",
+      "tus": "Certified Social Skills Trainer (TUS)",
+      "tsr": "Basic course in Solution Focused Therapy (TSR)",
+      "cbt": "Cognitive behavioral therapy (CBT) course in working with anxiety"
     }
   },
   "pricing": {
