@@ -268,7 +268,7 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-teal-600" />
-                  <span className="ml-4 text-gray-600">phone number placeholder</span>
+                  <span className="ml-4 text-gray-600">509 251 499</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-teal-600" />
