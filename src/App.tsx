@@ -9,6 +9,7 @@ import transparentLogo from "../assets/images/FullLogo_Transparent.png"
 import transparentLogoOnlyText from "../assets/images/FullLogo_Transparent_Text.png"
 import transparentLogoOnlyTextWhite from "../assets/images/FullLogo_Transparent_Text_white.png"
 import znanyLekarzLogo from "../assets/images/znanylekarz_logo.png";
+import icon from '../assets/images/icon.png';
 
 function App() {
   const { t } = useTranslation();
@@ -117,6 +118,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <link rel="icon" href={icon} />
       {/* Navigation */}
       <nav className="bg-white shadow-sm w-full z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
