@@ -248,7 +248,7 @@ function App() {
 <div className="flex justify-center items-center">
   <img
     src={transparentLogo}
-    alt="Kamino - Gabinet Psychologiczny w Poznaniu"
+    alt="Gabinet Kamino | Gabinet Psychologiczny w Poznaniu"
     className="max-w-xs md:max-w-sm h-auto bg-transparent"
   />
 </div>
