@@ -43,7 +43,7 @@ function App() {
         ], 
         description: "" 
     },
-    { type: "Diagnoza ADHD", duration: "5 godz.", price: "450 PLN", description: "" },
+    { type: "Diagnoza ADHD", duration: "ok 5h", price: "450 PLN", description: "" },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -70,7 +70,6 @@ function App() {
     
     const serviceID = 'service_d8qhuyf'
     const templateID = 'template_alq2x3t';
-    const userID = 'lHRQfs_725a_nJ457';
     
     emailjs.init('lHRQfs_725a_nJ457')
 
@@ -116,17 +115,17 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Helmet>
-        <title>Kamino - Gabinet Psychologiczny mgr Agaty Plura w Poznaniu</title>
-        <meta name="description" content="Kamino - Gabinet Psychologiczny mgr Agaty Plura w Poznaniu. Oferujemy profesjonalną pomoc psychologiczną, terapię indywidualną, diagnozę ADHD oraz Trening Słuchowy Metodą Tomatisa." />
+        <title>Kamino | Gabinet Psychologiczny | Agata Plura | Poznań</title>
+        <meta name="description" content="Kamino | Gabinet Psychologiczny | Agata Plura | Poznań. Oferujemy profesjonalną pomoc psychologiczną, terapię indywidualną, diagnozę ADHD oraz Trening Słuchowy Metodą Tomatisa." />
         <link rel="icon" href={icon} />
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Kamino - Gabinet Psychologiczny mgr Agaty Plura",
+              "name": "Kamino | Gabinet Psychologiczny | Agata Plura | Poznań",
               "image": "${transparentLogo}",
-              "url": "https://www.gabinetkamino.pl",
+              "url": "https://www.gabinetkamino.com",
               "telephone": "509251499",
               "address": {
                 "@type": "PostalAddress",
@@ -145,13 +144,19 @@ function App() {
                   "@type": "OpeningHoursSpecification",
                   "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                   "opens": "09:00",
-                  "closes": "18:00"
+                  "closes": "19:00"
                 },
                 {
                   "@type": "OpeningHoursSpecification",
                   "dayOfWeek": "Saturday",
                   "opens": "10:00",
-                  "closes": "14:00"
+                  "closes": "15:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Sunday",
+                  "opens": "09:00",
+                  "closes": "15:00"
                 }
               ],
               "priceRange": "150-1800 PLN",
@@ -172,7 +177,7 @@ function App() {
             <div className="flex items-center space-x-4">
             <img
           src={transparentLogoOnlyText}
-          alt="Kamino - Gabinet Psychologiczny mgr Agaty Plura"
+          alt="Kamino - Gabinet Psychologiczny mgr Agata Plura"
           className="h-12 object-contain"
         />
               
@@ -225,10 +230,10 @@ function App() {
       {/* Left Side - Text */}
       <div>
         <h1 className="text-4xl md:text-5xl font-serif text-teal-900 mb-6">
-          Twoja droga do zmiany i zrozumienia
+          Gabinet Psychologiczny 
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-          Kamino to przestrzeń w której wspólnie będziemy wędrować ku pełniejszemu i bardziej świadomemu życiu.
+          Kamino to przestrzeń w której wspólnie będziemy wędrować ku pełniejszemu i bardziej świadomemu życiu. Twoja droga do zmiany i zrozumienia
         </p>
         <a 
           href="#contact" 
@@ -522,8 +527,9 @@ function App() {
             <div>
               <h3 className="text-xl font-serif mb-4">Godziny przyjęć</h3>
               <p className="text-teal-200">
-                Poniedziałek - Piątek: 9:00 - 18:00<br />
-                Sobota: 10:00 - 14:00
+                Poniedziałek - Piątek: 9:00 - 19:00<br />
+                Sobota: 09:00 - 15:00<br />
+                Niedziela: 09:00 - 15:00
               </p>
             </div>
             <div>
