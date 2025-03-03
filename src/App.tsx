@@ -149,7 +149,7 @@ function App() {
                 {
                   "@type": "OpeningHoursSpecification",
                   "dayOfWeek": "Saturday",
-                  "opens": "10:00",
+                  "opens": "09:00",
                   "closes": "15:00"
                 },
                 {
