@@ -1,4 +1,6 @@
+# Allow all web crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://gabinetkamino.com/sitemap.xml
+# Sitemap location
+Sitemap: https://www.gabinetkamino.pl/sitemap.xml

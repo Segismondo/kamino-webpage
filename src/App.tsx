@@ -1,8 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Menu, X, Clock, Phone, Mail, MapPin, ChevronRight, Users, Brain, Sparkles, Facebook } from 'lucide-react';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from './components/LanguageSwitcher';
 import emailjs from 'emailjs-com';
 import personalPicture from "../assets/images/personal_picture.jpeg"
 import transparentLogo from "../assets/images/FullLogo_Transparent.png"
@@ -12,7 +11,6 @@ import znanyLekarzLogo from "../assets/images/znanylekarz_logo.png";
 import icon from '../assets/images/icon.png';
 
 function App() {
-  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,26 +26,25 @@ function App() {
   });
 
   const services = [
-    { icon: <Sparkles className="w-12 h-12 text-teal-600" />, title: t('services.individual.title'), description: t('services.individual.description') },
-    { icon: <Brain className="w-12 h-12 text-teal-600" />, title: t('services.tomatis.title'), description: t('services.tomatis.description') },
-    { icon: <Users className="w-12 h-12 text-teal-600" />, title: t('services.adhd.title'), description: t('services.adhd.description')},
+    { icon: <Sparkles className="w-12 h-12 text-teal-600" />, title: "Terapia indywidualna", description: "Zaburzenia lękowe, Zaburzenia nastroju, Zaburzenia osobowości" },
+    { icon: <Brain className="w-12 h-12 text-teal-600" />, title: "Trening Słuchowy Metodą Tomatisa", description: "Metoda stymulacji słuchowej poprawiająca koncentrację, naukę i komunikację" },
+    { icon: <Users className="w-12 h-12 text-teal-600" />, title: "Diagnoza ADHD u osób dorosłych", description: "Profesjonalna diagnoza i wsparcie dla osób z ADHD" },
   ];
 
   const pricing = [
-    { type: t('pricing.individual.title'), duration: t('pricing.individual.duration'), price: "150 PLN", description: t('pricing.individual.description') },
+    { type: "Sesja indywidualna", duration: "50 min", price: "150 PLN", description: "" },
     { 
-        type: t('pricing.tomatis.title'), 
-        duration: t('pricing.tomatis.duration'), 
+        type: "Trening Słuchowy Metodą Tomatisa", 
+        duration: "", 
         price: [
             { label: "Konsultacja", amount: "200 PLN" },
             { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" },
             { label: "Test przed kolejnym etapem", amount: "100 PLN" }
         ], 
-        description: t('pricing.tomatis.description') 
+        description: "" 
     },
-    { type: t('pricing.adhd.title'), duration: t('pricing.adhd.duration'), price: "450 PLN", description: t('pricing.adhd.description') },
-];
-
+    { type: "Diagnoza ADHD", duration: "5 godz.", price: "450 PLN", description: "" },
+  ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -89,7 +86,7 @@ function App() {
         submitting: false,
         success: true,
         error: false,
-        message: t('contact.form.successMessage')
+        message: "Twoja wiadomość została wysłana pomyślnie. Wkrótce się z Tobą skontaktujemy!"
       });
       
       
@@ -111,14 +108,63 @@ function App() {
         submitting: false,
         success: false,
         error: true,
-        message: t('contact.form.errorMessage')
+        message: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio."
       });
     }
   };
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <link rel="icon" href={icon} />
+      <Helmet>
+        <title>Kamino - Gabinet Psychologiczny mgr Agaty Plura w Poznaniu</title>
+        <meta name="description" content="Kamino - Gabinet Psychologiczny mgr Agaty Plura w Poznaniu. Oferujemy profesjonalną pomoc psychologiczną, terapię indywidualną, diagnozę ADHD oraz Trening Słuchowy Metodą Tomatisa." />
+        <link rel="icon" href={icon} />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Kamino - Gabinet Psychologiczny mgr Agaty Plura",
+              "image": "${transparentLogo}",
+              "url": "https://www.gabinetkamino.pl",
+              "telephone": "509251499",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ul. Żupańskiego 7/5",
+                "addressLocality": "Poznań",
+                "postalCode": "61-582",
+                "addressCountry": "PL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 52.3991,
+                "longitude": 16.9242
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "14:00"
+                }
+              ],
+              "priceRange": "150-1800 PLN",
+              "description": "Profesjonalna pomoc psychologiczna, terapia indywidualna, diagnoza ADHD oraz Trening Słuchowy Metodą Tomatisa w Poznaniu.",
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61573692717357",
+                "https://www.znanylekarz.pl"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+      
       {/* Navigation */}
       <nav className="bg-white shadow-sm w-full z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,7 +172,7 @@ function App() {
             <div className="flex items-center space-x-4">
             <img
           src={transparentLogoOnlyText}
-          alt="Agata Plura Logo"
+          alt="Kamino - Gabinet Psychologiczny mgr Agaty Plura"
           className="h-12 object-contain"
         />
               
@@ -134,23 +180,22 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-teal-900 hover:text-teal-600">{t('nav.home')}</a>
-              <a href="#services" className="text-teal-900 hover:text-teal-600">{t('nav.services')}</a>
-              <a href="#about" className="text-teal-900 hover:text-teal-600">{t('nav.about')}</a>
-              <a href="#pricing" className="text-teal-900 hover:text-teal-600">{t('nav.pricing')}</a>
-              <a href="#contact" className="text-teal-900 hover:text-teal-600">{t('nav.contact')}</a>
-              <LanguageSwitcher />
+              <a href="#home" className="text-teal-900 hover:text-teal-600">Strona główna</a>
+              <a href="#services" className="text-teal-900 hover:text-teal-600">Usługi</a>
+              <a href="#about" className="text-teal-900 hover:text-teal-600">O mnie</a>
+              <a href="#pricing" className="text-teal-900 hover:text-teal-600">Cennik</a>
+              <a href="#contact" className="text-teal-900 hover:text-teal-600">Kontakt</a>
               <a href="#contact" className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition">
-                {t('nav.bookNow')}
+                Umów wizytę
               </a>
             </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-4">
-              <LanguageSwitcher />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-500 hover:text-gray-600"
+                aria-label="Menu"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -162,11 +207,11 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#home" className="block px-3 py-2 text-teal-900 hover:text-teal-600">{t('nav.home')}</a>
-              <a href="#services" className="block px-3 py-2 text-teal-900 hover:text-teal-600">{t('nav.services')}</a>
-              <a href="#about" className="block px-3 py-2 text-teal-900 hover:text-teal-600">{t('nav.about')}</a>
-              <a href="#pricing" className="block px-3 py-2 text-teal-900 hover:text-teal-600">{t('nav.pricing')}</a>
-              <a href="#contact" className="block px-3 py-2 text-teal-900 hover:text-teal-600">{t('nav.contact')}</a>
+              <a href="#home" className="block px-3 py-2 text-teal-900 hover:text-teal-600">Strona główna</a>
+              <a href="#services" className="block px-3 py-2 text-teal-900 hover:text-teal-600">Usługi</a>
+              <a href="#about" className="block px-3 py-2 text-teal-900 hover:text-teal-600">O mnie</a>
+              <a href="#pricing" className="block px-3 py-2 text-teal-900 hover:text-teal-600">Cennik</a>
+              <a href="#contact" className="block px-3 py-2 text-teal-900 hover:text-teal-600">Kontakt</a>
             </div>
           </div>
         )}
@@ -179,17 +224,17 @@ function App() {
       
       {/* Left Side - Text */}
       <div>
-        <h2 className="text-4xl md:text-5xl font-serif text-teal-900 mb-6">
-          {t('hero.title')}
-        </h2>
+        <h1 className="text-4xl md:text-5xl font-serif text-teal-900 mb-6">
+          Twoja droga do zmiany i zrozumienia
+        </h1>
         <p className="text-lg text-gray-600 mb-8">
-          {t('hero.subtitle')}
+          Kamino to przestrzeń w której wspólnie będziemy wędrować ku pełniejszemu i bardziej świadomemu życiu.
         </p>
         <a 
           href="#contact" 
           className="bg-teal-600 text-white px-8 py-3 rounded-md hover:bg-teal-700 transition flex items-center inline-block"
         >
-          {t('hero.cta')}
+          Zarezerwuj pierwszą wizytę
           <ChevronRight className="ml-2 h-5 w-5" />
         </a>
       </div>
@@ -198,7 +243,7 @@ function App() {
 <div className="flex justify-center items-center">
   <img
     src={transparentLogo}
-    alt="Professional Psychologist"
+    alt="Kamino - Gabinet Psychologiczny w Poznaniu"
     className="max-w-xs md:max-w-sm h-auto bg-transparent"
   />
 </div>
@@ -212,7 +257,7 @@ function App() {
 <section id="services" className="py-24 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">
-      {t('services.title')}
+      Oferowane usługi
     </h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
       {services.map((service, index) => (
@@ -235,7 +280,7 @@ function App() {
       <div className="rounded-lg overflow-hidden shadow-xl">
         <img
           src={personalPicture}
-          alt="mgr Agata Plura"
+          alt="mgr Agata Plura - psycholog i psychoterapeuta w Poznaniu"
           className="w-full h-[600px] object-cover"
         />
       </div>
@@ -243,18 +288,18 @@ function App() {
       {/* Text Content */}
       <div>
         {/* Title */}
-        <h2 className="text-3xl font-serif font-bold text-teal-900 mb-6">{t('about.title')}</h2>
+        <h2 className="text-3xl font-serif font-bold text-teal-900 mb-6">O mgr Agacie Plura</h2>
         
         {/* Description */}
-        <p className="text-gray-700 mb-6">{t('about.description')}</p>
+        <p className="text-gray-700 mb-6">Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.</p>
 
         {/* Experience */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">📌 Doświadczenie</h3>
-        <p className="text-gray-700 mb-6">{t('about.experience')}</p>
+        <p className="text-gray-700 mb-6">Doświadczenie zdobywałam podczas praktyk w Wojewódzkim Szpitalu dla Nerwowo i Psychicznie Chorych 'Dziekanka',  Domu Pomocy Społecznej, szkole oraz w Stowarzyszeniach wspierających osoby w kryzysie. Na co dzień pracuję w Poradni Psychologiczno-Pedagogicznej, gdzie diagnozuję oraz wspieram dzieci i młodzież w trudnościach emocjonalnych, rozwojowych i edukacyjnych.</p>
 
         {/* Approach */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">💡 Podejście</h3>
-        <p className="text-gray-700 mb-6">{t('about.approach')}</p>
+        <p className="text-gray-700 mb-6">Pomagam lepiej zrozumieć siebie, swoje emocje i mechanizmy działania, co pozwala na bardziej świadome podejmowanie decyzji i budowanie satysfakcjonujących relacji. Wspieram w radzeniu sobie ze stresem, lękiem i trudnościami życiowymi, a także w odkrywaniu własnego potencjału i wewnętrznych zasobów.</p>
 
         {/* Credentials */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">🎓 Wykształcenie i Szkolenia</h3>
@@ -262,31 +307,31 @@ function App() {
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">📖 </span> {t('about.credentials.education')}
+              <span className="font-semibold">📖 </span> Magister psychologii klinicznej dzieci i młodzieży, Uniwersytet SWPS w Poznaniu
             </p>
           </li>
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">🧠 </span> {t('about.credentials.therapy')}
+              <span className="font-semibold">🧠 </span> Psychoterapeutka w trakcie szkolenia psychodynamicznego
             </p>
           </li>
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">🤝 </span> {t('about.credentials.tus')}
+              <span className="font-semibold">🤝 </span> Certyfikowany trener umiejętności społecznych (TUS)
             </p>
           </li>
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">🔍 </span> {t('about.credentials.tsr')}
+              <span className="font-semibold">🔍 </span> Podstawowy kurs Terapii Skoncentrowanej na Rozwiązaniach (TSR)
             </p>
           </li>
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">🧩 </span> {t('about.credentials.cbt')}
+              <span className="font-semibold">🧩 </span> Kurs terapii poznawczo-behawioralnej (CBT) w pracy z lękiem
             </p>
           </li>
         </ul>
@@ -299,7 +344,7 @@ function App() {
       {/* Pricing Section */}
 <section id="pricing" className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">{t('pricing.title')}</h2>
+        <h2 className="text-3xl font-serif text-center text-teal-900 mb-16">Cennik</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between min-h-[250px]">
@@ -343,8 +388,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-serif text-teal-900 mb-6">{t('contact.title')}</h2>
-              <p className="text-gray-600 mb-8">{t('contact.subtitle')}</p>
+              <h2 className="text-3xl font-serif text-teal-900 mb-6">Skontaktuj się</h2>
+              <p className="text-gray-600 mb-8">Gotowy na pierwszy krok? Skontaktuj się ze mną, aby umówić konsultację lub zadać pytania.</p>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-teal-600" />
@@ -360,6 +405,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-700 transition"
+                    aria-label="Lokalizacja na mapie"
                   >
                     <MapPin className="h-6 w-6" />
                   </a>
@@ -378,6 +424,7 @@ function App() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-teal-600 hover:text-teal-700 transition"
+                  aria-label="Facebook"
                 >
                   <Facebook className="h-6 w-6" />
                 </a>
@@ -397,16 +444,16 @@ function App() {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 {formStatus.success && (
                   <div className="p-4 bg-green-100 text-green-800 rounded-md">
-                    {formStatus.message || t('contact.form.successMessage')}
+                    {formStatus.message || "Twoja wiadomość została wysłana pomyślnie. Wkrótce się z Tobą skontaktujemy!"}
                   </div>
                 )}
                 {formStatus.error && (
                   <div className="p-4 bg-red-100 text-red-800 rounded-md">
-                    {formStatus.message || t('contact.form.errorMessage')}
+                    {formStatus.message || "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio."}
                   </div>
                 )}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t('contact.form.name')}</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Imię i nazwisko</label>
                   <input
                     type="text"
                     id="name"
@@ -417,7 +464,7 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('contact.form.email')}</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -428,7 +475,7 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">{t('contact.form.phone')}</label>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Telefon</label>
                   <input
                     type="tel"
                     id="phone"
@@ -438,7 +485,7 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t('contact.form.message')}</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Wiadomość</label>
                   <textarea
                     id="message"
                     rows={4}
@@ -453,7 +500,7 @@ function App() {
                   disabled={formStatus.submitting}
                   className={`w-full bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition ${formStatus.submitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  {formStatus.submitting ? t('contact.form.sending') : t('contact.form.submit')}
+                  {formStatus.submitting ? "Wysyłanie..." : "Wyślij wiadomość"}
                 </button>
               </form>
             </div>
@@ -468,16 +515,15 @@ function App() {
             <div className="flex-grow flex justify-center">
               <img
               src={transparentLogoOnlyTextWhite}
-              alt="Agata Plura Logo"
+              alt="Kamino - Gabinet Psychologiczny"
               className="h-12 object-contain"
             />
             </div>
             <div>
-              <h3 className="text-xl font-serif mb-4">{t('footer.hours.title')}</h3>
+              <h3 className="text-xl font-serif mb-4">Godziny przyjęć</h3>
               <p className="text-teal-200">
-                {t('footer.hours.weekdays')}<br />
-                {t('footer.hours.saturday')}<br />
-                {t('footer.hours.sunday')}
+                Poniedziałek - Piątek: 9:00 - 18:00<br />
+                Sobota: 10:00 - 14:00
               </p>
             </div>
             <div>
@@ -497,7 +543,7 @@ function App() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-teal-800 text-center text-teal-200">
-            <p>&copy; {new Date().getFullYear()} KAMINO {t('footer.rights')}</p>
+            <p>&copy; {new Date().getFullYear()} KAMINO Wszelkie prawa zastrzeżone</p>
           </div>
         </div>
       </footer>
