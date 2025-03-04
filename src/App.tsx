@@ -37,7 +37,7 @@ function App() {
         type: "Trening Słuchowy Metodą Tomatisa", 
         duration: "", 
         price: [
-            { label: "Konsultacja", amount: "200 PLN" },
+            { label: "Konsultacja", amount: "150 PLN" },
             { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" },
             { label: "Test przed kolejnym etapem", amount: "100 PLN" }
         ], 
