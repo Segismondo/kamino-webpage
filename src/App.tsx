@@ -163,7 +163,7 @@ function App() {
               "description": "Profesjonalna pomoc psychologiczna, terapia indywidualna, diagnoza ADHD oraz Trening Słuchowy Metodą Tomatisa w Poznaniu.",
               "sameAs": [
                 "https://www.facebook.com/profile.php?id=61573692717357",
-                "https://www.znanylekarz.pl"
+                "https://www.znanylekarz.pl/agata-plura/"
               ]
             }
           `}
@@ -534,7 +534,7 @@ function App() {
             </div>
             <div>
               <a 
-                href="https://www.znanylekarz.pl" 
+                href="https://www.znanylekarz.pl/agata-plura/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="block"
