@@ -296,11 +296,11 @@ function App() {
         <h2 className="text-3xl font-serif font-bold text-teal-900 mb-6">O mgr Agacie Plura</h2>
         
         {/* Description */}
-        <p className="text-gray-700 mb-6">Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.</p>
+        <p className="text-gray-700 mb-6">Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego w Międzynarodowej Szkole Psychoterapii Psychodynamicznej. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb..</p>
 
         {/* Experience */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">📌 Doświadczenie</h3>
-        <p className="text-gray-700 mb-6">Doświadczenie zdobywałam podczas praktyk w Wojewódzkim Szpitalu dla Nerwowo i Psychicznie Chorych 'Dziekanka',  Domu Pomocy Społecznej, szkole oraz w Stowarzyszeniach wspierających osoby w kryzysie. Na co dzień pracuję w Poradni Psychologiczno-Pedagogicznej, gdzie diagnozuję oraz wspieram dzieci i młodzież w trudnościach emocjonalnych, rozwojowych i edukacyjnych.</p>
+        <p className="text-gray-700 mb-6">Doświadczenie zdobywałam podczas praktyk w Wojewódzkim Szpitalu dla Nerwowo i Psychicznie Chorych 'Dziekanka', Domu Pomocy Społecznej, Stowarzyszeniach wspierających osoby w kryzysie, a także podczas pracy w Liceum Ogólnokształcącym. Na co dzień pracuję w Poradni Psychologiczno-Pedagogicznej, gdzie diagnozuję oraz wspieram dzieci i młodzież w trudnościach emocjonalnych, rozwojowych i edukacyjnych.</p>
 
         {/* Approach */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">💡 Podejście</h3>
