@@ -318,7 +318,7 @@ function App() {
           <li className="flex items-start">
             <ChevronRight className="h-6 w-6 text-teal-600" />
             <p className="ml-4 text-gray-700">
-              <span className="font-semibold">🧠 </span> Psychoterapeutka w trakcie szkolenia psychodynamicznego
+              <span className="font-semibold">🧠 </span> W trakcie szkolenia w Międzynarodowej Szkole Psychoterapii Psychodynamicznej
             </p>
           </li>
           <li className="flex items-start">
