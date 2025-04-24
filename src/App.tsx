@@ -32,18 +32,17 @@ function App() {
   ];
 
   const pricing = [
-    { type: "Sesja indywidualna", duration: "50 min", price: "150 PLN", description: "" },
+    { type: "Sesja indywidualna", duration: "50 min", price: "180 PLN", description: "" },
     { 
         type: "Trening Słuchowy Metodą Tomatisa", 
         duration: "", 
         price: [
             { label: "Konsultacja", amount: "150 PLN" },
-            { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" },
-            { label: "Test przed kolejnym etapem", amount: "100 PLN" }
+            { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" }
         ], 
         description: "" 
     },
-    { type: "Diagnoza ADHD", duration: "ok 5h", price: "450 PLN", description: "" },
+    { type: "Diagnoza ADHD", duration: "3-5 spotkania", price: "200 PLN ", description: "cena za spotkanie" },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -296,7 +295,7 @@ function App() {
         <h2 className="text-3xl font-serif font-bold text-teal-900 mb-6">O mgr Agacie Plura</h2>
         
         {/* Description */}
-        <p className="text-gray-700 mb-6">Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego w Międzynarodowej Szkole Psychoterapii Psychodynamicznej. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb..</p>
+        <p className="text-gray-700 mb-6">Jestem psycholożką i psychoterapeutką w trakcie szkolenia psychodynamicznego w Międzynarodowej Szkole Psychoterapii Psychodynamicznej. Ukończyłam pięcioletnie studia magisterskie na kierunku psychologia kliniczna dzieci i młodzieży na Uniwersytecie SWPS w Poznaniu. Nieustannie rozwijam swoje kompetencje, poszukując skutecznych metod pracy, które pozwalają lepiej dopasować pomoc do indywidualnych potrzeb.</p>
 
         {/* Experience */}
         <h3 className="text-xl font-semibold text-teal-800 mb-3">📌 Doświadczenie</h3>
