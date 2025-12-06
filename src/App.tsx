@@ -38,7 +38,7 @@ function App() {
         duration: "", 
         price: [
             { label: "Konsultacja", amount: "150 PLN" },
-            { label: "Terapia Tomatisa (etap)", amount: "1800 PLN" }
+            { label: "Terapia Tomatisa (etap)", amount: "1500 PLN" }
         ], 
         description: "" 
     },
